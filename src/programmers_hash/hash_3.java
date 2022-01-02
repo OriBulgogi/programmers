@@ -1,4 +1,4 @@
-package programmers;
+package programmers_hash;
 
 import java.util.HashMap;
 import java.util.Set;

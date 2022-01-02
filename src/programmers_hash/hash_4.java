@@ -1,4 +1,4 @@
-package programmers;
+package programmers_hash;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,7 +32,7 @@ public class hash_4 {
         			max = plays[j];
         			first_idx = j;
         		}
-        	}
+        	} 
         	max =0;
         	for(int j=0; j<genres.length; j++) {
         		if(first_idx != j) { 
