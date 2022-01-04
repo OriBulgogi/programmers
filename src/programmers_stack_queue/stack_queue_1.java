@@ -2,30 +2,23 @@ package programmers_stack_queue;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class stack_queue_1 {
 
 	public int[] solution(int[] progresses, int[] speeds) {
-		Queue<Integer> deadline = new ConcurrentLinkedQueue<Integer>();;
-		
+		Queue<Integer> deadline = new LinkedList<>();
+		List<Integer> answer_list = new ArrayList<>();
 
-//		for(int i=0; i<progresses.length; i++) {        	
-//			if(((100-progresses[i]) % speeds[i]) == 0){
-//				deadline.add((100-progresses[i]) / speeds[i]); 
-//			}else {
-//				deadline.add(((100-progresses[i]) / speeds[i])+1) ;
-//			}
-//		}
-		
-		  for(int i = 0; i < progresses.length; i++) {
-	            deadline.add((100-progresses[i])%speeds[i] == 0? (100 - progresses[i]) / speeds[i]
-	                    : (100 - progresses[i]) / speeds[i] + 1);
-	        }
-		List<Integer> answer_list = new ArrayList<Integer>();
-		
+		for(int i=0; i<progresses.length; i++) {        	
+			if(((100-progresses[i]) % speeds[i]) == 0){
+				deadline.add((100-progresses[i]) / speeds[i]); 
+			}else {
+				deadline.add(((100-progresses[i]) / speeds[i])+1) ;
+			}
+		}
 		int pop_value = deadline.poll();
 		int pop_num = 1;
 		
