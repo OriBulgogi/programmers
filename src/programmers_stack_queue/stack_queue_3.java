@@ -31,9 +31,8 @@ public class stack_queue_3 {
 				total_weight = move_queue.peek().weight;
 				continue;
 			}
-			for(truck t : move_queue) {
-				t.moving();
-			}
+			for(truck t : move_queue) t.moving();
+			
 			if(bridge_length  < move_queue.peek().move) {
 				truck  t = move_queue.poll();
 				total_weight -= t.weight;
@@ -43,12 +42,8 @@ public class stack_queue_3 {
 				truck t = wait_queue.poll();
 				move_queue.add(t);
 				total_weight += t.weight;
-				
 			}
-			
-			
 		}
-		
 		return answer;
 	}
 
