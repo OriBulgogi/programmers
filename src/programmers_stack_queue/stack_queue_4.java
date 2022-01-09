@@ -12,6 +12,7 @@ public class stack_queue_4 {
 		for(int i=prices.length-1; i >= 0; i--) {
 			stack.push(prices[i]);
 		}
+		//d
 		
 		for(int i=0; i< answer.length-1; i++) {
 			int cur = stack.pop();
