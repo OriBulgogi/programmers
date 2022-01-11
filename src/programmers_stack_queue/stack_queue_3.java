@@ -6,7 +6,7 @@ import java.util.Queue;
 public class stack_queue_3 {
 	class truck{
 		int weight =0;
-		int move = 1;
+		int move = 1; 
 		public truck(int weight) {
 			this.weight = weight;
 		}
@@ -33,7 +33,7 @@ public class stack_queue_3 {
 			}
 			for(truck t : move_queue) t.moving();
 			
-			if(bridge_length  < move_queue.peek().move) {
+			if(bridge_length  < move_queue.peek().move) { //제일 앞차가 다리를 통과
 				truck  t = move_queue.poll();
 				total_weight -= t.weight;
 				
