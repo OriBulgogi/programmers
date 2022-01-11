@@ -23,11 +23,10 @@ public class stack_queue_4 {
 		*/
 		//stack class solution 
 		//stack에 아직 가격이 떨어지지않은 index를 저장 하고 순차적으로 비교하다가 떨어지는 시점에 pop
-		//
 		Stack<Integer> stack = new Stack<>();
-		
 		int i =0;
 		stack.push(i); //시작하는 index를 push하고 시작한다
+		
 		for(i =1; i < prices.length; i++) {
 			while(!stack.empty() && prices[i] < prices[stack.peek()]) { //가격이 떨어지면
 				int start_index = stack.pop(); 
@@ -35,11 +34,10 @@ public class stack_queue_4 {
 			}
 			stack.push(i); //다음 인덱스의 가격이 안떨어지면
 		}
-		System.out.println(Arrays.toString(answer));
-		System.out.println(stack);
-		while(!stack.empty()) {
+
+		while(!stack.empty()) { //끝까지 가격이 떨어지지않은 index 처리
 			int start_index = stack.pop();
-			answer[start_index] = i -start_index-1;
+			answer[start_index] = i -start_index-1; //전체길이 - 현재인덱스 위치(실제길이 위해 -1)해주어 구함
 		}
 		return answer;
 	}
