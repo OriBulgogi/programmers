@@ -23,7 +23,7 @@ public class heap_2 {
 		int time =0; //수행되고난 직후의 시간
 		int jobsindex =0; //jobs 배열의 인덱스
 		int count =0; //수행된 요청
-		Arrays.sort(jobs, (o1,o2) -> o1[0] - o2[0]); //들어온 순서 정렬 
+		Arrays.sort(jobs, (o1,o2) -> o1[0] - o2[0]); //작업 들어온 시간 기준 정렬
         PriorityQueue<int[]> task_queue = new PriorityQueue<>((o1,o2) -> o1[1] - o2[1]);
         //수행시간 오름차순 정렬 
         while(count < jobs.length) {
