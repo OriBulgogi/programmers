@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 public class heap_3 {
-	 public int[] solution(String[] operations) {
+	 public int[] solution(String[] operations) { //d
 	        int[] answer = {0,0};
 	        int count =0;
 	        PriorityQueue<Integer> min_queue = new PriorityQueue<>();
