@@ -5,4 +5,6 @@ public class target_number {
 	        int answer = 0;
 	        return answer;
 	    }
+	   target_number ta = new target_number();
+	  
 }
